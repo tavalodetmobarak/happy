@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style media="screen">
+			body {
+				background-size:cover;
+				overflow: auto;
+				height: 100%;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+		<script src="./js/rainyday.js"></script>
+		<script>
+			function run() {
+				var image = document.getElementById('background');
+				image.onload = function() {
+					var engine = new RainyDay({
+						image: this
+					});
+					engine.rain([ [0, 2, 200], [3, 3, 1] ], 100);
+				};
+				image.crossOrigin = 'anonymous';
+            	image.src = './img/01.jpg';
+            }
+		</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+
+<body onload="run();" background-size: 100%;>
+<img id="background" alt="background" src="" />
+    <audio src="./music.ogg" autoplay="true" loop="loop"></audio>
+    <div class="modal show" style="top:24%;">
+        <div class="modal-dialog" style="opacity: .9">
+            <div class="modal-content" style="opacity:.85">
+                <div class="modal-header">
+                    <h1 class="text-center" style="color: #A94442;font-family: 'JournalRegular', Arial, sans-serif;font-size: 7rem;">Happy birthday to Negin </h1>
+                    <p class="text-center small-title">Pause and make your soul glad</p>
+                    <p class="text-center small-title">on your birthday!</p>
+                </div>
+                <div class="modal-body text-left" style="line-height: 0.5rem;font-family: 'JournalRegular', Arial, sans-serif;font-size: 2rem;">
+                    <p>
+                    <p>
+
+	                <a href="https://mega.nz/#!BjJDQRhR!moUDp81cv4nxOT3qYKZJasZSinVI_RQ82cDn145fRjY"style="color: #8e8e8e"> A little gift for you </a>
+
+		
+                    <p class="text-center" style="color:#A94442;font-size: 20px" id="say"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
